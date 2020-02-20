@@ -6,7 +6,7 @@ from selenium.common.exceptions import NoAlertPresentException
 
 class ProductPage(BasePage):
     def should_be_promo_in_url(self):
-        assert "?promo=newYear" in self.browser.current_url
+        assert "?promo=" in self.browser.current_url
 
     def should_be_price_product(self):
         self.is_element_present(*ProductPageLocators.PRICE_PRODUCT)

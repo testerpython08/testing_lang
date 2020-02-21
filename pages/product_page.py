@@ -59,7 +59,7 @@ class ProductPage(BasePage):
             print("No second alert presented")
 
     def message_is_not_present(self):
-        assert self.is_not_element_present(*ProductPageLocators.MESSAGE_SUCCESS)
+        assert self.is_not_element_present(*ProductPageLocators.MESSAGE_SUCCESS), "Success message is presented"
 
     def message_is_dissapeared(self):
-        assert self.is_dissappeared(*ProductPageLocators.MESSAGE_SUCCESS)
+        assert self.is_dissappeared(*ProductPageLocators.MESSAGE_SUCCESS), "Success message is not dissapeared"

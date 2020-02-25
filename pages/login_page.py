@@ -30,7 +30,6 @@ class LoginPage(BasePage):
         return password
 
     def register_new_user(self, email, password):
-        self.go_to_login_page()
         self.should_be_register_form()
         email_register = self.browser.find_element(*LoginPageLocators.REGISTER_EMAIL)
         email_register.send_keys(email)
